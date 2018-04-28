@@ -3,7 +3,7 @@ var express = require('express');
 var app = express();
 var http = require('http').Server(app);
 var io = require('socket.io')(http);
-const PORTNUM = 3000;
+const PORTNUM = 80;
 
 //Import static files (js/css/images)
 app.use(express.static('public'));
