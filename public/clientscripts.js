@@ -1,19 +1,14 @@
-function closeModal(){
-	console.log($("#givenName").val());
-	window.name = $("#givenName").val();
-	console.log(window.name);
-	return false;
-}
 function docReady () {
-	//$('#myModal').modal();
 	var mysocket = io();
 	$('.messageform').submit(() => {
 		//Calls 'chat message' with typed message as msg
 		var msg = $('#m').val();
-		if(msg[0] === "/"){
+		if(msg[0] === ":"){
+			//User Commands
 			var spaceInd = msg.indexOf(" ");
 			var command = msg.slice(1, spaceInd);
-			if(command="setname" && msg.length > spaceInd + 1 && spaceInd > 0){
+			//Setname commands
+			if(command == "setname" && msg.length > spaceInd + 1 && spaceInd > 0){
 				window.name = msg.slice(9);
 			}
 		}else{
