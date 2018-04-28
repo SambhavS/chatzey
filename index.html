@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="en">
+  <head>
+	  	<!-- JS/CSS Links -->
+		  	<!-- Socket.io & Jquery & Font-Awesome-->
+		  	<script src="/socket.io/socket.io.js"></script>
+			<script src="https://code.jquery.com/jquery-1.11.1.js"></script>
+      <script defer src="https://use.fontawesome.com/releases/v5.0.10/js/all.js" integrity="sha384-slN8GvtUJGnv6ca26v8EzVaR9DC58QEwsIk9q1QXdCU8Yu8ck/tL/5szYlBbqmS+" crossorigin="anonymous"></script>
+
+			<!-- Bootstrap -->
+			<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+			<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+			<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
+			<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
+			 <meta charset="utf-8">
+		    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+		    <!-- My CSS -->
+		    <link rel="stylesheet" href="style.css">
+		<!-- End of JS/CSS Links -->
+    <title>Welcome to Chatzey!</title>
+  </head>
+  <body >
+
+
+<div id="myModal" class="modal" tabindex="-1" role="dialog">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Chatzey welcomes you!</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form>
+          Please enter your name: <input id="givenName" class="" type="text" name="fname">
+        <button type="submit" onclick="closeModal()" class="btn btn-primary btn-sm" data-dismiss="modal">Enter</button>
+      </form>
+      </div>
+      <div class="modal-footer">
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+<div class="container-fluid">
+    <div class="row">
+      <div class="col-md-4 ">
+        <div class="border-right tall d-none d-sm-block">
+          <br/>
+         <div class="card d-none d-sm-block" style="width: 25vw;">
+          <ul class="list-group list-group-flush">
+            <a href="https://google.com" class="noStyleLink"><li class=" noStleLink list-group-item">Chatzey Townsquare</li></a>
+            <a href="https://google.com" class="noStyleLink"><li class="font-weight-light noStleLink list-group-item">Emerson</li></a>
+            <a href="https://google.com" class="noStyleLink"><li class="font-weight-light noStleLink list-group-item">Akash</li></a>
+            <a href="https://google.com" class="noStyleLink"><li class="font-weight-light noStleLink list-group-item">George</li></a>
+          </ul>
+        </div>
+      </div>
+      </div>
+      <div class="col-md-8">
+        <div class="d-inline-block">
+            <button type="button" class="btn btn-link d-block d-sm-none"> <i class="fas fa-long-arrow-alt-left fa-2x"></i></button>
+        </div>
+        <div class="d-inline-block">
+          <h3 class="chatName h2 font-weight-light">Chatzey Chatroom</h3>
+        </div>  
+        <hr/>
+        <ul id="messages"></ul>
+        <form class="messageform" action="" >
+        <span>
+          <hr/>
+        <div class="row">
+          <div class="col-8 col-md-6"><input class=" font-weight-light form-control" id="m" autocomplete="off" /></div>
+          <div class="col-1 col-md-2"><button type="button" class=" send btn btn-outline-primary">Send</button><button type="button" class="gear btn btn-light d-none d-sm-block"><i class="fas fa-cog"></i></button></div>
+        </div>
+        </span>
+        </form>        
+      </div>
+    </div>
+</div>
+
+
+
+
+  </body>
+  <script src="clientscripts.js"></script>
+</html>

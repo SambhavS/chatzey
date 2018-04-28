@@ -1,0 +1,71 @@
+
+h3{
+	margin: 10;
+}
+.messageform{ 
+	padding: 5px; position: fixed; 
+	bottom: 0; 
+	width: 100%; 
+}
+
+#messages { 
+	list-style-type: none; 
+	margin: 0; 
+	padding: 0; 
+}
+#messages li {
+ padding: 5px 10px; 
+ /*background-color: #aaa;*/
+}
+
+.ownmessage{
+	margin-top: 5px; 
+	float: right;
+	clear: both;
+}
+
+.othermessage{
+	margin-top: 5px; 
+	float: left;
+	clear: both;
+}
+.fullwide{
+	width: 100%;
+}
+.tall{
+	height: 100vh;
+}
+.gear{
+	float: right;
+	clear: both;
+	margin-right: 18px;
+
+}
+.chatName{
+	margin-top: 10px;
+}
+a:link{
+	    text-decoration: none;
+}
+.noStyleLink{
+	color:black;
+}
+.noStyleLink :hover{
+	color: black;
+	background-color: #fdfdfd;
+}
+.noStyleLink :active{
+	color: black;
+	background-color: #fdfdfd;
+}
+.send{
+	margin-left: 7px;
+	}
+#givenName{
+	border: 1px solid #ccc;
+	border-radius: 4px;
+	margin-top: 8px;
+	padding-top: 2px;
+	padding-bottom: 2px;
+
+}
