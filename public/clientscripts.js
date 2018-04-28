@@ -1,6 +1,8 @@
 function docReady () {
 	var mysocket = io();
 	// print out original messages.
+
+	// TODO: EVERYONE IS BOB!
 	window.name = "bob";
 	
 	mysocket.emit('begin session', 123);
@@ -12,6 +14,8 @@ function docReady () {
 		}
 	});
 
+	// Finish initializing
+	
 	$('.messageform').submit(() => {
 		//Calls 'chat message' with typed message as msg
 		var msg = $('#m').val();
