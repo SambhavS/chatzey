@@ -1,5 +1,9 @@
 function docReady () {
 	var mysocket = io();
+
+	// print out original messages.
+	mysocket.emit('begin session', 123);
+
 	$('.messageform').submit(() => {
 		//Calls 'chat message' with typed message as msg
 		var msg = $('#m').val();
@@ -12,9 +16,9 @@ function docReady () {
 				window.name = msg.slice(9);
 			}
 		}else{
+			// Chat message found!
 			mysocket.emit('chat message', window.name + ": " + msg);
 			$('#messages').append($('<li class="ownmessage font-weight-light bg-primary text-light rounded">').text(msg));
-
 		}
 		$('#m').val('');
 		return false;
